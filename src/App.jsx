@@ -52,33 +52,42 @@ export function App() {
         onOpenContact={() => setIsContactOpen(true)}
       />
 
-      {/* Main Container */}
-      <main>
-        {/* Full-width Hero Section */}
+      {/* Main Content: Sequential Full-Width Vertical Sections (One Below The Other) */}
+      <main className="space-y-4 sm:space-y-6">
+        {/* 1. Hero Section */}
         <Hero onOpenContact={() => setIsContactOpen(true)} />
 
-        {/* 2-Column Split Bento Dashboard Layout matching the design */}
-        <div className="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8 pb-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-7 items-start">
-            
-            {/* Left Column (Feature highlights, About Me, Technical Skills) */}
-            <div className="lg:col-span-7 space-y-6">
-              <ValueHighlights />
-              <About onOpenResume={() => setIsResumeOpen(true)} />
-              <Skills />
-            </div>
-
-            {/* Right Column (Featured Projects 2x2, Numbers Speak, Work Experience) */}
-            <div className="lg:col-span-5 space-y-6">
-              <Projects onSelectProject={(project) => setSelectedProject(project)} />
-              <Stats />
-              <Experience />
-            </div>
-
-          </div>
+        {/* 2. Core Feature Value Highlights */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ValueHighlights />
         </div>
 
-        {/* Full-width CTA Banner with mountain scenery */}
+        {/* 3. About Me Section */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <About onOpenResume={() => setIsResumeOpen(true)} />
+        </div>
+
+        {/* 4. Technical Skills Section */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Skills />
+        </div>
+
+        {/* 5. Featured Projects Section */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Projects onSelectProject={(project) => setSelectedProject(project)} />
+        </div>
+
+        {/* 6. Numbers Speak / Stats Section */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Stats />
+        </div>
+
+        {/* 7. Work Experience Timeline Section */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Experience />
+        </div>
+
+        {/* 8. Call To Action Banner with Mountain Landscape Graphic */}
         <CtaBanner onOpenContact={() => setIsContactOpen(true)} />
       </main>
 

@@ -1,82 +1,139 @@
-import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import React, { useState } from 'react';
+import { ArrowRight, ExternalLink } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 import { ProjectMockup } from './ProjectMockups';
+import { GithubIcon } from './SocialIcons';
 
 export const Projects = ({ onSelectProject }) => {
   const { projects } = portfolioData;
+  const [filter, setFilter] = useState('All');
+
+  const filteredProjects = filter === 'All'
+    ? projects
+    : projects.filter((p) => p.category.toLowerCase() === filter.toLowerCase());
 
   return (
-    <section id="projects" className="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/90 shadow-[0_2px_12px_rgba(0,0,0,0.03)] text-left">
-      {/* Header */}
-      <div className="flex items-center justify-between mb-5">
-        <div>
-          <div className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-brand-600 mb-1">
-            <span className="w-1.5 h-1.5 rounded-full bg-brand-600" />
-            <span>Projects</span>
+    <section id="projects" className="py-12 sm:py-16">
+      <div className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200/90 shadow-soft text-left">
+        
+        {/* Section Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+          <div>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 border border-blue-100 text-brand-600 text-xs font-bold uppercase tracking-wider mb-2.5">
+              <span className="w-2 h-2 rounded-full bg-brand-600" />
+              <span>Projects</span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+              Featured Projects
+            </h2>
           </div>
-          <h2 className="text-2xl font-extrabold text-slate-900 tracking-tight">
-            Featured Projects
-          </h2>
+
+          {/* Filter Pills */}
+          <div className="flex items-center gap-2 bg-slate-50 p-1.5 rounded-2xl border border-slate-200/80">
+            {['All', 'Full Stack', 'Frontend'].map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setFilter(cat)}
+                className={`px-4 py-1.5 rounded-xl text-xs font-semibold transition-all ${
+                  filter === cat
+                    ? 'bg-brand-600 text-white shadow-xs'
+                    : 'text-slate-600 hover:text-slate-900 hover:bg-white'
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
         </div>
 
-        <a
-          href="#projects"
-          className="inline-flex items-center gap-1 text-xs font-semibold text-brand-600 hover:text-brand-800 transition-colors"
-        >
-          <span>View All Projects</span>
-          <ArrowRight className="w-3.5 h-3.5" />
-        </a>
-      </div>
-
-      {/* 2x2 Projects Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        {projects.map((project) => (
-          <div
-            key={project.id}
-            onClick={() => onSelectProject(project)}
-            className="bg-slate-50/70 hover:bg-white rounded-2xl border border-slate-200/80 hover:border-brand-300 hover:shadow-md transition-all flex flex-col justify-between overflow-hidden cursor-pointer group"
-          >
-            {/* Mockup Preview Area */}
-            <div className="h-32 bg-slate-950 p-2 relative overflow-hidden">
-              <div className="w-full h-full rounded-lg overflow-hidden border border-white/10 shadow-inner">
-                <ProjectMockup type={project.previewType} />
-              </div>
-            </div>
-
-            {/* Card Content */}
-            <div className="p-4 flex-1 flex flex-col justify-between">
-              <div>
-                <h3 className="font-bold text-slate-900 text-sm group-hover:text-brand-600 transition-colors mb-1">
-                  {project.title}
-                </h3>
-                <p className="text-slate-500 text-xs leading-relaxed line-clamp-2 mb-3">
-                  {project.description}
-                </p>
-
-                {/* Tech Pills */}
-                <div className="flex flex-wrap gap-1 mb-3">
-                  {project.tags.slice(0, 3).map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-2 py-0.5 rounded-md bg-white border border-slate-200 text-slate-600 text-[10px] font-medium"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+        {/* 2-Column Responsive Project Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {filteredProjects.map((project) => (
+            <div
+              key={project.id}
+              className="bg-slate-50/70 hover:bg-white rounded-3xl border border-slate-200/90 overflow-hidden shadow-2xs hover:shadow-soft hover:border-brand-300 transition-all flex flex-col justify-between group"
+            >
+              {/* Top Interactive Mockup Preview */}
+              <div
+                onClick={() => onSelectProject(project)}
+                className="h-48 sm:h-56 bg-slate-950 p-3.5 relative overflow-hidden cursor-pointer"
+              >
+                <div className="w-full h-full rounded-xl overflow-hidden border border-white/10 shadow-inner group-hover:scale-[1.02] transition-transform duration-300">
+                  <ProjectMockup type={project.previewType} />
                 </div>
               </div>
 
-              {/* Action Link */}
-              <div className="pt-2 border-t border-slate-200/60 flex items-center justify-between">
-                <span className="inline-flex items-center gap-1 text-xs font-bold text-brand-600 group-hover:text-brand-700">
-                  <span>View Project</span>
-                  <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
-                </span>
+              {/* Card Body */}
+              <div className="p-6 flex-1 flex flex-col justify-between text-left">
+                <div>
+                  <div className="flex items-center justify-between mb-2">
+                    <h3
+                      onClick={() => onSelectProject(project)}
+                      className="text-xl font-bold text-slate-900 group-hover:text-brand-600 transition-colors cursor-pointer"
+                    >
+                      {project.title}
+                    </h3>
+                    <span className="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-blue-50 text-brand-700 border border-blue-100">
+                      {project.badge}
+                    </span>
+                  </div>
+
+                  <p className="text-slate-600 text-sm leading-relaxed mb-4">
+                    {project.description}
+                  </p>
+
+                  {/* Tech Tags */}
+                  <div className="flex flex-wrap gap-1.5 mb-6">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-2.5 py-1 rounded-lg bg-white border border-slate-200 text-slate-700 text-xs font-medium"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Footer Action Links */}
+                <div className="pt-4 border-t border-slate-200/80 flex items-center justify-between">
+                  <button
+                    onClick={() => onSelectProject(project)}
+                    className="inline-flex items-center gap-1.5 text-sm font-bold text-brand-600 hover:text-brand-800 transition-colors group/btn"
+                  >
+                    <span>View Project</span>
+                    <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                  </button>
+
+                  <div className="flex items-center gap-2">
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label="Source Code"
+                      className="p-2 rounded-lg text-slate-500 hover:text-slate-900 hover:bg-slate-100 transition-colors"
+                      title="Source Code"
+                    >
+                      <GithubIcon className="w-4 h-4" />
+                    </a>
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label="Live Demo"
+                      className="p-2 rounded-lg text-slate-500 hover:text-brand-600 hover:bg-blue-50 transition-colors"
+                      title="Live Demo"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                    </a>
+                  </div>
+                </div>
+
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+
       </div>
     </section>
   );
