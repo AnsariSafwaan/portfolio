@@ -52,8 +52,8 @@ export function App() {
         onOpenContact={() => setIsContactOpen(true)}
       />
 
-      {/* Main Content: Sequential Full-Width Vertical Sections (One Below The Other) */}
-      <main className="space-y-4 sm:space-y-6">
+      {/* Main Sequential Flow */}
+      <main className="space-y-6 sm:space-y-7 pb-6">
         {/* 1. Hero Section */}
         <Hero onOpenContact={() => setIsContactOpen(true)} />
 
@@ -87,7 +87,7 @@ export function App() {
           <Experience />
         </div>
 
-        {/* 8. Call To Action Banner with Mountain Landscape Graphic */}
+        {/* 8. Call To Action Banner */}
         <CtaBanner onOpenContact={() => setIsContactOpen(true)} />
       </main>
 
