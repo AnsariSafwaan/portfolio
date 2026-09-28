@@ -1,149 +1,82 @@
-import React, { useState } from 'react';
-import { ArrowRight, ExternalLink, Sparkles } from 'lucide-react';
+import React from 'react';
+import { ArrowRight } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 import { ProjectMockup } from './ProjectMockups';
-import { GithubIcon } from './SocialIcons';
 
 export const Projects = ({ onSelectProject }) => {
   const { projects } = portfolioData;
-  const [filter, setFilter] = useState('All');
-
-  const filteredProjects = filter === 'All'
-    ? projects
-    : projects.filter(p => p.category.toLowerCase() === filter.toLowerCase());
 
   return (
-    <section id="projects" className="py-16 sm:py-20 bg-gradient-to-b from-transparent via-blue-50/20 to-transparent">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4 text-left">
-          <div>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-50 border border-brand-100 text-brand-600 text-xs font-bold uppercase tracking-wider mb-3">
-              <span className="w-2 h-2 rounded-full bg-brand-600" />
-              Projects
-            </div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-              Featured Projects
-            </h2>
+    <section id="projects" className="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/90 shadow-[0_2px_12px_rgba(0,0,0,0.03)] text-left">
+      {/* Header */}
+      <div className="flex items-center justify-between mb-5">
+        <div>
+          <div className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-brand-600 mb-1">
+            <span className="w-1.5 h-1.5 rounded-full bg-brand-600" />
+            <span>Projects</span>
           </div>
-
-          {/* Filter tabs */}
-          <div className="flex items-center gap-2 bg-white p-1.5 rounded-2xl border border-slate-200/80 shadow-xs">
-            {['All', 'Full Stack', 'Frontend'].map((category) => (
-              <button
-                key={category}
-                onClick={() => setFilter(category)}
-                className={`px-4 py-1.5 rounded-xl text-xs font-semibold transition-all duration-200 ${
-                  filter === category
-                    ? 'bg-brand-600 text-white shadow-xs'
-                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
-                }`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
+          <h2 className="text-2xl font-extrabold text-slate-900 tracking-tight">
+            Featured Projects
+          </h2>
         </div>
 
-        {/* Projects Grid (2 columns on desktop) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-          {filteredProjects.map((project) => (
-            <div
-              key={project.id}
-              className="bg-white rounded-3xl border border-slate-200/80 overflow-hidden shadow-soft hover:shadow-soft-lg hover:border-brand-300 transition-all duration-300 flex flex-col justify-between group text-left"
-            >
-              {/* Top Interactive Mockup / Preview Banner */}
-              <div
-                onClick={() => onSelectProject(project)}
-                className="relative h-48 sm:h-56 bg-slate-950 overflow-hidden cursor-pointer p-3.5 group-hover:scale-[1.01] transition-transform duration-300"
-              >
-                <div className="w-full h-full rounded-xl overflow-hidden border border-white/10 shadow-inner">
-                  <ProjectMockup type={project.previewType} />
-                </div>
+        <a
+          href="#projects"
+          className="inline-flex items-center gap-1 text-xs font-semibold text-brand-600 hover:text-brand-800 transition-colors"
+        >
+          <span>View All Projects</span>
+          <ArrowRight className="w-3.5 h-3.5" />
+        </a>
+      </div>
 
-                {/* Overlay hover cue */}
-                <div className="absolute inset-0 bg-brand-900/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
-                  <span className="bg-white text-brand-600 font-bold text-xs px-4 py-2 rounded-full shadow-lg flex items-center gap-1.5 transform translate-y-2 group-hover:translate-y-0 transition-all">
-                    <span>View Project Details</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </span>
-                </div>
+      {/* 2x2 Projects Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {projects.map((project) => (
+          <div
+            key={project.id}
+            onClick={() => onSelectProject(project)}
+            className="bg-slate-50/70 hover:bg-white rounded-2xl border border-slate-200/80 hover:border-brand-300 hover:shadow-md transition-all flex flex-col justify-between overflow-hidden cursor-pointer group"
+          >
+            {/* Mockup Preview Area */}
+            <div className="h-32 bg-slate-950 p-2 relative overflow-hidden">
+              <div className="w-full h-full rounded-lg overflow-hidden border border-white/10 shadow-inner">
+                <ProjectMockup type={project.previewType} />
               </div>
+            </div>
 
-              {/* Card Body */}
-              <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between">
-                <div>
-                  {/* Title & Badge */}
-                  <div className="flex items-center justify-between mb-2">
-                    <h3
-                      onClick={() => onSelectProject(project)}
-                      className="text-xl font-bold text-slate-900 group-hover:text-brand-600 transition-colors cursor-pointer"
+            {/* Card Content */}
+            <div className="p-4 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 className="font-bold text-slate-900 text-sm group-hover:text-brand-600 transition-colors mb-1">
+                  {project.title}
+                </h3>
+                <p className="text-slate-500 text-xs leading-relaxed line-clamp-2 mb-3">
+                  {project.description}
+                </p>
+
+                {/* Tech Pills */}
+                <div className="flex flex-wrap gap-1 mb-3">
+                  {project.tags.slice(0, 3).map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-2 py-0.5 rounded-md bg-white border border-slate-200 text-slate-600 text-[10px] font-medium"
                     >
-                      {project.title}
-                    </h3>
-                    <span className="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-brand-50 text-brand-700 border border-brand-100">
-                      {project.badge}
+                      {tag}
                     </span>
-                  </div>
-
-                  {/* Description */}
-                  <p className="text-slate-600 text-sm leading-relaxed mb-4">
-                    {project.description}
-                  </p>
-
-                  {/* Tech Tags */}
-                  <div className="flex flex-wrap gap-1.5 mb-6">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 font-medium text-xs border border-slate-200/60"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+                  ))}
                 </div>
+              </div>
 
-                {/* Footer Action Links */}
-                <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
-                  <button
-                    onClick={() => onSelectProject(project)}
-                    className="inline-flex items-center gap-1.5 text-sm font-bold text-brand-600 hover:text-brand-800 transition-colors group/btn"
-                  >
-                    <span>View Project</span>
-                    <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                  </button>
-
-                  <div className="flex items-center gap-2">
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noreferrer"
-                      aria-label="GitHub Repository"
-                      className="p-2 rounded-lg text-slate-400 hover:text-slate-800 hover:bg-slate-100 transition-colors"
-                      title="Source Code"
-                    >
-                      <GithubIcon className="w-4 h-4" />
-                    </a>
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noreferrer"
-                      aria-label="Live Demo"
-                      className="p-2 rounded-lg text-slate-400 hover:text-brand-600 hover:bg-brand-50 transition-colors"
-                      title="Live Demo"
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                    </a>
-                  </div>
-                </div>
-
+              {/* Action Link */}
+              <div className="pt-2 border-t border-slate-200/60 flex items-center justify-between">
+                <span className="inline-flex items-center gap-1 text-xs font-bold text-brand-600 group-hover:text-brand-700">
+                  <span>View Project</span>
+                  <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
+                </span>
               </div>
             </div>
-          ))}
-        </div>
-
+          </div>
+        ))}
       </div>
     </section>
   );

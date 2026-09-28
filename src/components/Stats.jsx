@@ -1,55 +1,48 @@
 import React from 'react';
-import { CheckCircle2, TrendingUp, Boxes, Heart } from 'lucide-react';
-import { portfolioData } from '../data/portfolioData';
-
-const statIcons = {
-  CheckCircle2: CheckCircle2,
-  TrendingUp: TrendingUp,
-  Boxes: Boxes,
-  Heart: Heart,
-};
+import { CheckCircle2, FileCode2, Layers, Heart } from 'lucide-react';
 
 export const Stats = () => {
-  const { stats } = portfolioData;
+  const statsList = [
+    { value: '4+', label: 'Projects Completed', icon: CheckCircle2 },
+    { value: '1+', label: 'Years of Learning', icon: FileCode2 },
+    { value: '5+', label: 'Technologies Used', icon: Layers },
+    { value: '100%', label: 'Passion & Dedication', icon: Heart },
+  ];
 
   return (
-    <section className="py-12 sm:py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Section Header */}
-        <div className="text-left mb-8">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-50 border border-brand-100 text-brand-600 text-xs font-bold uppercase tracking-wider mb-3">
-            <span className="w-2 h-2 rounded-full bg-brand-600" />
-            My Journey
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-            Numbers Speak
-          </h2>
+    <section className="bg-white rounded-3xl p-6 border border-slate-200/90 shadow-[0_2px_12px_rgba(0,0,0,0.03)] text-left">
+      {/* Header */}
+      <div className="mb-4">
+        <div className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-brand-600 mb-1">
+          <span className="w-1.5 h-1.5 rounded-full bg-brand-600" />
+          <span>My Journey</span>
         </div>
+        <h2 className="text-2xl font-extrabold text-slate-900 tracking-tight">
+          Numbers Speak
+        </h2>
+      </div>
 
-        {/* Stats Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
-          {stats.map((stat, idx) => {
-            const IconComp = statIcons[stat.icon] || CheckCircle2;
-            return (
-              <div
-                key={idx}
-                className="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-xs hover:shadow-md hover:border-brand-300 transition-all duration-300 flex flex-col items-start text-left group"
-              >
-                <div className="w-12 h-12 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-brand-600 group-hover:text-white transition-all duration-300">
-                  <IconComp className="w-6 h-6" />
-                </div>
-                <div className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight group-hover:text-brand-600 transition-colors">
-                  {stat.value}
-                </div>
-                <div className="text-xs sm:text-sm font-semibold text-slate-500 mt-1">
-                  {stat.label}
-                </div>
+      {/* 4 Stats in a row */}
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+        {statsList.map((stat, idx) => {
+          const Icon = stat.icon;
+          return (
+            <div
+              key={idx}
+              className="bg-slate-50/70 rounded-2xl p-3.5 border border-slate-200/80 flex flex-col items-start justify-between text-left group hover:border-brand-300 transition-colors"
+            >
+              <div className="w-7 h-7 rounded-lg bg-blue-100/70 text-brand-600 flex items-center justify-center mb-2">
+                <Icon className="w-4 h-4" />
               </div>
-            );
-          })}
-        </div>
-
+              <div className="text-2xl font-extrabold text-slate-900 tracking-tight group-hover:text-brand-600 transition-colors">
+                {stat.value}
+              </div>
+              <div className="text-[11px] font-medium text-slate-500 mt-0.5 leading-snug">
+                {stat.label}
+              </div>
+            </div>
+          );
+        })}
       </div>
     </section>
   );
