@@ -3,7 +3,7 @@ import { Send, ArrowRight } from 'lucide-react';
 
 export const CtaBanner = ({ onOpenContact }) => {
   return (
-    <section id="contact" className="relative pt-8 pb-0 overflow-hidden">
+    <section id="contact" className="scroll-mt-24 relative pt-6 pb-0 overflow-hidden">
       <div className="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Floating CTA Banner */}

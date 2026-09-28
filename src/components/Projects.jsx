@@ -13,7 +13,7 @@ export const Projects = ({ onSelectProject }) => {
     : projects.filter((p) => p.category.toLowerCase() === filter.toLowerCase());
 
   return (
-    <section id="projects" className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-soft text-left">
+    <section id="projects" className="scroll-mt-24 bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-soft text-left">
       {/* Section Header */}
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 gap-4">
         <div>

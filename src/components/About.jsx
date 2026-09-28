@@ -14,7 +14,7 @@ export const About = ({ onOpenResume }) => {
   };
 
   return (
-    <section id="about" className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-soft text-left">
+    <section id="about" className="scroll-mt-24 bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-soft text-left">
       {/* Section Tag & Heading */}
       <div className="mb-6">
         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 border border-blue-100 text-brand-600 text-xs font-bold uppercase tracking-wider mb-2">

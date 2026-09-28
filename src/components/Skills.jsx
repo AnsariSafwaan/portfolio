@@ -13,7 +13,7 @@ export const Skills = () => {
     : skills.filter((s) => s.category.toLowerCase() === activeCategory.toLowerCase());
 
   return (
-    <section id="skills" className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-soft text-left">
+    <section id="skills" className="scroll-mt-24 bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-soft text-left">
       {/* Section Header & Filters */}
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 gap-4">
         <div>
