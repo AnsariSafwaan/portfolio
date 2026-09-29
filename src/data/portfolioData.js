@@ -4,47 +4,47 @@ export const portfolioData = {
     role: "Full Stack Developer",
     greeting: "Hello, I'm",
     tagline: "Turning ideas into real solutions",
-    shortBio: "I build modern, scalable and user-friendly web applications using the latest technologies. Passionate about solving real-world problems through clean code and innovative solutions.",
+    shortBio: "Results-driven Full Stack Developer with hands-on experience building and scaling production-ready web applications with Next.js, React, Python, FastAPI, and modern databases.",
     aboutHeadline: "Turning Ideas into Real Web Solutions",
-    aboutDescription: "I'm a passionate Full Stack Developer with a strong interest in building modern web applications. I enjoy working with both frontend and backend technologies, and I'm always exploring new tools and frameworks to improve my skills and create better user experiences.",
-    location: "India",
-    email: "safwaan@example.com",
-    phone: "+91 98765 43210",
+    aboutDescription: "Results-driven Full Stack Developer with hands-on experience building and scaling production-ready web applications. Proficient in engineering secure backend services with Python, FastAPI, and MS SQL Server, alongside developing responsive, dynamic user interfaces using Next.js (TypeScript) and React.js. Proven ability to architect RESTful APIs, implement complex database schemas, and enforce enterprise-grade security protocols (JWT, RBAC).",
+    location: "Mumbai, India",
+    email: "ansarisafwaan0987@gmail.com",
+    phone: "+91 983 36 133 15",
     availability: "Open for new opportunities",
-    github: "https://github.com",
-    linkedin: "https://linkedin.com",
+    github: "https://github.com/AnsariSafwaan",
+    linkedin: "https://linkedin.com/in/ansarisafwaan",
     twitter: "https://x.com",
+    resumePdfUrl: "./Safwaan_Ansari_Resume.pdf",
     codeSnippet: `const developer = {
   name: "Safwaan Ansari",
   role: "Full Stack Developer",
-  skills: ["React", "Node.js", "Next.js", "MongoDB"],
-  status: "Ready to build amazing apps"
+  skills: ["Next.js", "React.js", "Python", "FastAPI", "MS SQL"]
 };`
   },
 
   valueHighlights: [
     {
       id: "clean-code",
-      title: "Clean Code",
-      description: "Write maintainable, scalable codebase",
+      title: "Clean Architecture",
+      description: "Scalable frontend & secure backend APIs",
       icon: "Code2"
     },
     {
       id: "modern-stack",
-      title: "Modern Stack",
-      description: "React, Node.js, MongoDB and more",
+      title: "Modern Tech Stack",
+      description: "Next.js, React, FastAPI, MS SQL, MongoDB",
       icon: "Layers"
     },
     {
-      id: "problem-solver",
-      title: "Problem Solver",
-      description: "Find efficient solutions to complex problems",
+      id: "security-first",
+      title: "Enterprise Security",
+      description: "JWT Auth, RBAC, lockout & rotation policies",
       icon: "Lightbulb"
     },
     {
       id: "continuous-learning",
-      title: "Continuous Learning",
-      description: "Always exploring new technologies",
+      title: "Full-Stack Versatility",
+      description: "From UI/UX Figma conversion to database design",
       icon: "BookOpen"
     }
   ],
@@ -54,21 +54,21 @@ export const portfolioData = {
       value: "4+",
       number: 4,
       suffix: "+",
-      label: "Projects Completed",
+      label: "Major Projects Completed",
       icon: "CheckCircle2"
     },
     {
       value: "1+",
       number: 1,
       suffix: "+",
-      label: "Years of Learning & Experience",
+      label: "Years of Professional Exp.",
       icon: "TrendingUp"
     },
     {
       value: "12+",
       number: 12,
       suffix: "+",
-      label: "Technologies Used",
+      label: "Core Technologies",
       icon: "Boxes"
     },
     {
@@ -82,20 +82,36 @@ export const portfolioData = {
 
   skills: [
     {
-      name: "React",
-      category: "Frontend",
-      color: "#61DAFB",
-      icon: "react",
-      level: 90,
-      description: "Hooks, Context API, Redux Toolkit, React Router, Performance Optimization"
-    },
-    {
       name: "Next.js",
       category: "Frontend",
       color: "#000000",
       icon: "nextjs",
+      level: 90,
+      description: "TypeScript, SSR, SSG, App Router, Responsive Web Design"
+    },
+    {
+      name: "React.js",
+      category: "Frontend",
+      color: "#61DAFB",
+      icon: "react",
+      level: 92,
+      description: "Hooks, Functional Components, State Management, API Integration"
+    },
+    {
+      name: "FastAPI",
+      category: "Backend",
+      color: "#009688",
+      icon: "nodejs",
+      level: 88,
+      description: "High-performance Python APIs, SQLAlchemy ORM, Swagger, Dependency Injection"
+    },
+    {
+      name: "Python",
+      category: "Language",
+      color: "#3776AB",
+      icon: "nodejs",
       level: 85,
-      description: "App Router, SSR, SSG, Server Actions, API Routes, NextAuth"
+      description: "FastAPI, Automation scripts, SpeechRecognition, SMTP integration"
     },
     {
       name: "JavaScript",
@@ -103,47 +119,31 @@ export const portfolioData = {
       color: "#F7DF1E",
       icon: "javascript",
       level: 92,
-      description: "ES6+, Async/Await, Closures, DOM Manipulation, Event Loop"
+      description: "ES6+, Async/Await, Modular Architecture, DOM Manipulation"
     },
     {
       name: "TypeScript",
       category: "Language",
       color: "#3178C6",
       icon: "typescript",
-      level: 80,
-      description: "Strict Typing, Generics, Interfaces, Type Narrowing, Utility Types"
-    },
-    {
-      name: "Node.js",
-      category: "Backend",
-      color: "#339933",
-      icon: "nodejs",
       level: 85,
-      description: "Event-driven architecture, RESTful API design, File System, Streams"
+      description: "Strong Typing, Interfaces, Generics, Next.js Type safety"
     },
     {
-      name: "Express.js",
-      category: "Backend",
-      color: "#000000",
-      icon: "express",
-      level: 88,
-      description: "Middleware routing, JWT authentication, Error handling, Rate limiting"
-    },
-    {
-      name: "MongoDB",
+      name: "MS SQL Server",
       category: "Database",
-      color: "#47A248",
-      icon: "mongodb",
-      level: 82,
-      description: "Mongoose schemas, Aggregation pipeline, Indexing, CRUD modeling"
+      color: "#CC292B",
+      icon: "mysql",
+      level: 85,
+      description: "Complex schemas, SQLAlchemy ORM, Stored Procedures, Queries"
     },
     {
       name: "MySQL",
       category: "Database",
       color: "#4479A1",
       icon: "mysql",
-      level: 78,
-      description: "Relational queries, Joins, Transactions, Normalization, Prisma/Sequelize"
+      level: 85,
+      description: "Relational Modeling, Indexing, Transactions, Normalization"
     },
     {
       name: "Tailwind CSS",
@@ -151,7 +151,7 @@ export const portfolioData = {
       color: "#06B6D4",
       icon: "tailwind",
       level: 95,
-      description: "Responsive layouts, Flexbox/Grid, Dark mode, Custom components"
+      description: "Mobile-first responsive design, Utility-first styling, Animations"
     },
     {
       name: "Git & GitHub",
@@ -159,100 +159,100 @@ export const portfolioData = {
       color: "#F05032",
       icon: "git",
       level: 88,
-      description: "Branching strategies, Pull requests, Merge conflict resolution, CI/CD"
+      description: "Branching strategies, CI/CD Actions, Version management"
     },
     {
       name: "Postman",
       category: "API Testing",
       color: "#FF6C37",
       icon: "postman",
-      level: 85,
-      description: "Endpoint testing, Collections, Environment variables, Mock servers"
+      level: 90,
+      description: "RESTful API testing, Environments, Automated request flows"
     },
     {
       name: "Docker",
       category: "Deployment",
       color: "#2496ED",
       icon: "docker",
-      level: 75,
-      description: "Containerization, Dockerfile configuration, Docker Compose, Volumes"
+      level: 80,
+      description: "Containerization, Environment consistency, Deployment"
     }
   ],
 
   projects: [
     {
-      id: "task-management-app",
-      title: "Task Management App",
+      id: "job-portal",
+      title: "Job Portal (naukri.kaninfos.com)",
       category: "Full Stack",
-      description: "A full-stack task management application with user authentication, task CRUD operations and real-time updates.",
-      tags: ["React", "Node.js", "MongoDB", "Express.js", "Tailwind CSS"],
-      imageBg: "from-blue-500/20 to-indigo-500/20",
+      description: "A production-ready full-stack Job Portal with Next.js (TypeScript) frontend and FastAPI + MS SQL Server backend.",
+      tags: ["Next.js", "TypeScript", "FastAPI", "MS SQL", "SQLAlchemy", "JWT", "SMTP"],
+      imageBg: "from-blue-600/20 to-indigo-600/20",
       themeColor: "#2563eb",
-      badge: "Full Stack App",
-      github: "https://github.com/example/task-manager",
-      live: "https://task-manager-demo.example.com",
+      badge: "Enterprise Full Stack",
+      github: "https://github.com/AnsariSafwaan",
+      live: "https://naukri.kaninfos.com",
       features: [
-        "Secure user authentication with JWT & bcrypt",
-        "Interactive drag-and-drop Kanban board",
-        "Real-time task synchronization across devices",
-        "Priority tags, due dates, and activity logs"
+        "Co-developed Next.js (TypeScript) frontend and FastAPI + MS SQL backend",
+        "Secure backend APIs with SQLAlchemy ORM, JWT authentication, and RBAC",
+        "Automated OTP email verification via SMTP protocol",
+        "Enterprise security features: 5-attempt account lockout and password rotation policies"
       ],
       previewType: "kanban"
     },
     {
-      id: "e-commerce-website",
-      title: "E-Commerce Website",
-      category: "Full Stack",
-      description: "A modern e-commerce platform with product listings, cart, and secure payment integration.",
-      tags: ["Next.js", "Tailwind CSS", "Stripe", "Node.js", "MongoDB"],
-      imageBg: "from-amber-500/20 to-rose-500/20",
-      themeColor: "#f59e0b",
-      badge: "E-Commerce",
-      github: "https://github.com/example/ecommerce-store",
-      live: "https://ecommerce-store-demo.example.com",
-      features: [
-        "Product catalog with smart filtering & search",
-        "Seamless Stripe checkout flow with webhooks",
-        "Shopping cart state persistence with Zustand",
-        "Admin dashboard for product & order management"
-      ],
-      previewType: "shop"
-    },
-    {
-      id: "weather-forecast-app",
-      title: "Weather Forecast App",
-      category: "Frontend",
-      description: "A responsive weather application with real-time data, location search and beautiful UI.",
-      tags: ["React", "OpenWeather API", "JavaScript", "Tailwind CSS"],
-      imageBg: "from-sky-500/20 to-cyan-500/20",
+      id: "voice-automation-agent",
+      title: "Voice-Activated Automation Agent",
+      category: "Backend",
+      description: "An intelligent local virtual assistant built with Python to automate desktop workflows, voice navigation, and email sending.",
+      tags: ["Python", "pyttsx3", "SpeechRecognition", "SMTP", "System APIs"],
+      imageBg: "from-sky-500/20 to-blue-600/20",
       themeColor: "#0284c7",
-      badge: "API Integration",
-      github: "https://github.com/example/weather-forecast",
-      live: "https://weather-app-demo.example.com",
+      badge: "Automation & AI",
+      github: "https://github.com/AnsariSafwaan",
+      live: "https://github.com/AnsariSafwaan",
       features: [
-        "7-day weather forecasts and hourly temperature breakdown",
-        "Geolocation-based weather detection",
-        "Interactive dynamic weather animations (rain, sun, snow)",
-        "Search autocomplete with historical saved locations"
+        "Developed local voice assistant using Python, pyttsx3, and SpeechRecognition",
+        "Voice-controlled browser navigation, dynamic web searches, and media playback",
+        "Integrated SMTP protocol to authenticate and send voice-dictated emails programmatically",
+        "Custom system API integrations for desktop workflow automations"
       ],
       previewType: "weather"
     },
     {
-      id: "portfolio-website",
-      title: "Portfolio Website",
+      id: "alpine-river-hill",
+      title: "Interactive Web UI (Alpine River Hill)",
       category: "Frontend",
-      description: "A personal portfolio website to showcase my skills, projects and experience.",
-      tags: ["Next.js", "Tailwind CSS", "Vercel", "Framer Motion"],
+      description: "High-fidelity frontend replica of a responsive web application utilizing React.js, JavaScript (ES6+), and Bootstrap.",
+      tags: ["React.js", "JavaScript", "Bootstrap", "HTML5", "CSS3"],
+      imageBg: "from-amber-500/20 to-rose-500/20",
+      themeColor: "#f59e0b",
+      badge: "Responsive Frontend",
+      github: "https://github.com/AnsariSafwaan",
+      live: "https://github.com/AnsariSafwaan",
+      features: [
+        "Modular, component-based architecture with reusable functional components",
+        "Converted UI/UX designs into pixel-perfect responsive layouts",
+        "Managed UI state and implemented adaptive, mobile-first styling",
+        "Cross-browser compatibility and smooth navigation modals"
+      ],
+      previewType: "shop"
+    },
+    {
+      id: "portfolio-website",
+      title: "Full Stack Developer Portfolio",
+      category: "Frontend",
+      description: "A modern, high-performance personal portfolio website built with React, Vite, and Tailwind CSS.",
+      tags: ["React.js", "Tailwind CSS", "Vite", "GitHub Actions"],
       imageBg: "from-purple-500/20 to-blue-500/20",
       themeColor: "#7c3aed",
       badge: "Portfolio & UI",
-      github: "https://github.com/example/safwaan-portfolio",
-      live: "https://safwaan-portfolio.example.com",
+      github: "https://github.com/AnsariSafwaan/portfolio",
+      live: "https://ansarisafwaan.github.io/portfolio/",
       features: [
-        "Clean, pixel-perfect Bento-grid inspired layout",
-        "Smooth interactive animations with Framer Motion",
-        "Mobile-first responsive architecture",
-        "Interactive project previews and contact workflow"
+        "Pixel-perfect responsive Bento-grid layout with smooth scrolling",
+        "Interactive project preview walkthrough modals",
+        "Downloadable and printable CV integration directly from public assets",
+        "Automated CI/CD deployment pipeline via GitHub Actions"
       ],
       previewType: "portfolio"
     }
@@ -261,45 +261,43 @@ export const portfolioData = {
   experiences: [
     {
       id: "exp-1",
-      period: "2023 - Present",
+      period: "July 2025 – Present",
       role: "Full Stack Developer",
-      company: "Tech Solutions Pvt. Ltd.",
+      company: "KAN Infocom · Mumbai, India",
       badge: "Current",
       isCurrent: true,
       points: [
-        "Developed and maintained web applications using React, Node.js and MongoDB.",
-        "Collaborated with cross-functional teams to deliver high-quality features.",
-        "Improved application performance and reduced load time by 40%."
+        "Co-developed a full-stack Job Portal (naukri.kaninfos.com) using Next.js (TypeScript) for frontend and FastAPI with MS SQL Server for backend.",
+        "Built secure backend APIs with SQLAlchemy ORM, JWT authentication, RBAC, and automated OTP email verification via SMTP.",
+        "Implemented enterprise security features including 5-attempt account lockout and password rotation policies."
       ],
-      technologies: ["React", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"]
+      technologies: ["Next.js", "TypeScript", "Python", "FastAPI", "MS SQL Server", "SQLAlchemy", "JWT", "SMTP"]
     },
     {
       id: "exp-2",
-      period: "2022 - 2023",
-      role: "Frontend Developer",
-      company: "WebCraft Studio",
-      badge: "Previous",
+      period: "Sep 2024 – Dec 2024",
+      role: "Web Development Intern",
+      company: "Brainwave Matrix Solution · Mumbai, India",
+      badge: "Internship",
       isCurrent: false,
       points: [
-        "Built responsive and interactive UI components using React and Tailwind CSS.",
-        "Integrated REST APIs and worked with backend team for seamless data flow.",
-        "Enhanced accessibility and cross-browser compatibility across all client projects."
+        "Converted UI/UX Figma templates into responsive, interactive frontend web pages and reusable components using React.js, HTML5, and CSS3.",
+        "Implemented client-side state handling and form validations while ensuring mobile-friendly cross-browser compatibility."
       ],
-      technologies: ["React", "JavaScript", "Tailwind CSS", "REST APIs", "Git"]
+      technologies: ["React.js", "JavaScript (ES6+)", "HTML5", "CSS3", "Responsive Web Design"]
+    }
+  ],
+
+  education: [
+    {
+      degree: "Bachelor of Engineering in Computer Engineering",
+      institution: "Watumull College of Electronics Engineering, Mumbai",
+      completed: "Completed: May 2024"
     },
     {
-      id: "exp-3",
-      period: "2021 - 2022",
-      role: "Junior Developer",
-      company: "InnovateTech",
-      badge: "Foundation",
-      isCurrent: false,
-      points: [
-        "Assisted in building and maintaining web applications.",
-        "Fixed bugs, refactored legacy code, and improved existing features.",
-        "Participated in agile sprints, daily standups, and code reviews."
-      ],
-      technologies: ["HTML5", "CSS3", "JavaScript", "Node.js", "MySQL"]
+      degree: "Diploma in Computer Engineering",
+      institution: "Maratha Mandir's Babasaheb Gawde Institute of Technology, Mumbai",
+      completed: "Completed: Jan 2021"
     }
   ]
 };
