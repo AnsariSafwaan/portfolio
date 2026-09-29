@@ -1,7 +1,7 @@
 import React from 'react';
 import { Mail, ArrowUp } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
-import { GithubIcon, LinkedinIcon, TwitterIcon } from './SocialIcons';
+import { GithubIcon, LinkedinIcon } from './SocialIcons';
 
 export const Footer = ({ onOpenContact }) => {
   const { personal } = portfolioData;
@@ -68,15 +68,6 @@ export const Footer = ({ onOpenContact }) => {
               className="p-2 rounded-lg text-slate-500 hover:text-brand-600 hover:bg-slate-100 transition-colors"
             >
               <LinkedinIcon className="w-4 h-4" />
-            </a>
-            <a
-              href={personal.twitter}
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Twitter / X"
-              className="p-2 rounded-lg text-slate-500 hover:text-brand-600 hover:bg-slate-100 transition-colors"
-            >
-              <TwitterIcon className="w-4 h-4" />
             </a>
             <button
               onClick={onOpenContact}

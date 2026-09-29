@@ -89,15 +89,6 @@ export const Hero = ({ onOpenContact }) => {
               >
                 <LinkedinIcon className="w-4 h-4" />
               </a>
-              <a
-                href={personal.twitter}
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Twitter / X Profile"
-                className="w-9 h-9 rounded-full bg-slate-100 hover:bg-brand-50 text-slate-700 hover:text-brand-600 flex items-center justify-center transition-colors"
-              >
-                <TwitterIcon className="w-4 h-4" />
-              </a>
               <button
                 onClick={onOpenContact}
                 aria-label="Send Email"
