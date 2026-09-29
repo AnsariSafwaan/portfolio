@@ -149,8 +149,8 @@ export const Hero = ({ onOpenContact }) => {
                   <p><span className="text-purple-400">const</span> <span className="text-sky-300">developer</span> = {'{'}</p>
                   <p className="pl-2.5"><span className="text-slate-400">name:</span> <span className="text-amber-300">"Safwaan Ansari"</span>,</p>
                   <p className="pl-2.5"><span className="text-slate-400">role:</span> <span className="text-amber-300">"Full Stack Developer"</span>,</p>
-                  <p className="pl-2.5"><span className="text-slate-400">skills:</span> [<span className="text-emerald-300">"React"</span>, <span className="text-emerald-300">"Node.js"</span>,</p>
-                  <p className="pl-7"><span className="text-emerald-300">"Next.js"</span>, <span className="text-emerald-300">"MongoDB"</span>]</p>
+                  <p className="pl-2.5"><span className="text-slate-400">skills:</span> [<span className="text-emerald-300">"Python"</span>, <span className="text-emerald-300">"FastAPI"</span>,</p>
+                  <p className="pl-7"><span className="text-emerald-300">"Next.js"</span>, <span className="text-emerald-300">"React.js"</span>, <span className="text-emerald-300">"MS SQL"</span>]</p>
                   <p>{'};'}</p>
                 </div>
               </div>

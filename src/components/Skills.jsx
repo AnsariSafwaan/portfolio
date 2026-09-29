@@ -6,7 +6,7 @@ export const Skills = () => {
   const { skills } = portfolioData;
   const [activeCategory, setActiveCategory] = useState('All');
 
-  const categories = ['All', 'Frontend', 'Backend', 'Database', 'Language'];
+  const categories = ['All', 'Languages', 'Frontend', 'Backend & APIs', 'Databases', 'Tools & Workflow'];
 
   const filteredSkills = activeCategory === 'All'
     ? skills
@@ -32,7 +32,7 @@ export const Skills = () => {
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-3.5 py-1.5 rounded-xl text-xs font-semibold transition-all ${
+              className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition-all ${
                 activeCategory === cat
                   ? 'bg-brand-600 text-white shadow-xs'
                   : 'text-slate-600 hover:text-slate-900 hover:bg-white'

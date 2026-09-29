@@ -4,21 +4,20 @@ export const portfolioData = {
     role: "Full Stack Developer",
     greeting: "Hello, I'm",
     tagline: "Turning ideas into real solutions",
-    shortBio: "Results-driven Full Stack Developer with hands-on experience building and scaling production-ready web applications with Next.js, React, Python, FastAPI, and modern databases.",
+    shortBio: "Results-driven Full Stack Developer with hands-on experience building and scaling production-ready web applications using Python, FastAPI, MS SQL Server, Next.js, and React.js.",
     aboutHeadline: "Turning Ideas into Real Web Solutions",
-    aboutDescription: "Results-driven Full Stack Developer with hands-on experience building and scaling production-ready web applications. Proficient in engineering secure backend services with Python, FastAPI, and MS SQL Server, alongside developing responsive, dynamic user interfaces using Next.js (TypeScript) and React.js. Proven ability to architect RESTful APIs, implement complex database schemas, and enforce enterprise-grade security protocols (JWT, RBAC).",
+    aboutDescription: "Results-driven Full Stack Developer with hands-on experience building and scaling production-ready web applications. Proficient in engineering secure backend services with Python, FastAPI, and MS SQL Server, alongside developing responsive, dynamic user interfaces using Next.js (TypeScript) and React.js. Proven ability to architect RESTful APIs, implement complex database schemas, and enforce enterprise-grade security protocols (JWT, RBAC) for end-to-end full-stack solutions.",
     location: "Mumbai, India",
     email: "ansarisafwaan0987@gmail.com",
     phone: "+91 983 36 133 15",
     availability: "Open for new opportunities",
     github: "https://github.com/AnsariSafwaan",
     linkedin: "https://linkedin.com/in/ansarisafwaan",
-    twitter: "https://x.com",
     resumePdfUrl: "./Safwaan_Ansari_Resume.pdf",
     codeSnippet: `const developer = {
   name: "Safwaan Ansari",
   role: "Full Stack Developer",
-  skills: ["Next.js", "React.js", "Python", "FastAPI", "MS SQL"]
+  skills: ["Python", "FastAPI", "Next.js", "React.js", "MS SQL"]
 };`
   },
 
@@ -26,25 +25,25 @@ export const portfolioData = {
     {
       id: "clean-code",
       title: "Clean Architecture",
-      description: "Scalable frontend & secure backend APIs",
+      description: "FastAPI RESTful APIs & Next.js TypeScript frontends",
       icon: "Code2"
     },
     {
       id: "modern-stack",
-      title: "Modern Tech Stack",
-      description: "Next.js, React, FastAPI, MS SQL, MongoDB",
+      title: "Full Stack Skills",
+      description: "Python, FastAPI, Next.js, React.js, MS SQL, MySQL",
       icon: "Layers"
     },
     {
       id: "security-first",
       title: "Enterprise Security",
-      description: "JWT Auth, RBAC, lockout & rotation policies",
+      description: "JWT Authentication, RBAC, lockout & rotation policies",
       icon: "Lightbulb"
     },
     {
       id: "continuous-learning",
-      title: "Full-Stack Versatility",
-      description: "From UI/UX Figma conversion to database design",
+      title: "Automation & Design",
+      description: "Voice automation with Python, responsive UI/UX conversion",
       icon: "BookOpen"
     }
   ],
@@ -54,21 +53,21 @@ export const portfolioData = {
       value: "4+",
       number: 4,
       suffix: "+",
-      label: "Major Projects Completed",
+      label: "Major Projects",
       icon: "CheckCircle2"
     },
     {
       value: "1+",
       number: 1,
       suffix: "+",
-      label: "Years of Professional Exp.",
+      label: "Years of Experience",
       icon: "TrendingUp"
     },
     {
-      value: "12+",
-      number: 12,
+      value: "15+",
+      number: 15,
       suffix: "+",
-      label: "Core Technologies",
+      label: "Technical Skills",
       icon: "Boxes"
     },
     {
@@ -82,12 +81,52 @@ export const portfolioData = {
 
   skills: [
     {
+      name: "Python",
+      category: "Languages",
+      color: "#3776AB",
+      icon: "python",
+      level: 90,
+      description: "FastAPI, Automation, SpeechRecognition, pyttsx3, SMTP integration"
+    },
+    {
+      name: "JavaScript",
+      category: "Languages",
+      color: "#F7DF1E",
+      icon: "javascript",
+      level: 92,
+      description: "ES6+, Async/Await, Reusable Components, DOM manipulation"
+    },
+    {
+      name: "TypeScript",
+      category: "Languages",
+      color: "#3178C6",
+      icon: "typescript",
+      level: 88,
+      description: "Type-safety, Next.js integration, Interfaces, Generics"
+    },
+    {
+      name: "SQL",
+      category: "Languages",
+      color: "#00758F",
+      icon: "sql",
+      level: 88,
+      description: "Complex queries, Relational modeling, Database schemas, Joins"
+    },
+    {
+      name: "HTML5 & CSS3",
+      category: "Languages",
+      color: "#E44D26",
+      icon: "html5",
+      level: 95,
+      description: "Semantic layouts, CSS3 styling, Mobile-first responsive design"
+    },
+    {
       name: "Next.js",
       category: "Frontend",
       color: "#000000",
       icon: "nextjs",
       level: 90,
-      description: "TypeScript, SSR, SSG, App Router, Responsive Web Design"
+      description: "TypeScript, SSR, Dynamic UI components, App architecture"
     },
     {
       name: "React.js",
@@ -95,87 +134,79 @@ export const portfolioData = {
       color: "#61DAFB",
       icon: "react",
       level: 92,
-      description: "Hooks, Functional Components, State Management, API Integration"
+      description: "Hooks, Functional components, State handling, Form validations"
+    },
+    {
+      name: "Bootstrap",
+      category: "Frontend",
+      color: "#7952B3",
+      icon: "bootstrap",
+      level: 90,
+      description: "Responsive grids, UI components, Cross-browser compatibility"
     },
     {
       name: "FastAPI",
-      category: "Backend",
+      category: "Backend & APIs",
       color: "#009688",
-      icon: "nodejs",
+      icon: "fastapi",
+      level: 90,
+      description: "High-performance Python backend APIs, SQLAlchemy ORM, Swagger docs"
+    },
+    {
+      name: "SQLAlchemy",
+      category: "Backend & APIs",
+      color: "#E53935",
+      icon: "sqlalchemy",
       level: 88,
-      description: "High-performance Python APIs, SQLAlchemy ORM, Swagger, Dependency Injection"
+      description: "Python ORM, Model relations, Schema migrations, Database sessions"
     },
     {
-      name: "Python",
-      category: "Language",
-      color: "#3776AB",
-      icon: "nodejs",
-      level: 85,
-      description: "FastAPI, Automation scripts, SpeechRecognition, SMTP integration"
-    },
-    {
-      name: "JavaScript",
-      category: "Language",
-      color: "#F7DF1E",
-      icon: "javascript",
-      level: 92,
-      description: "ES6+, Async/Await, Modular Architecture, DOM Manipulation"
-    },
-    {
-      name: "TypeScript",
-      category: "Language",
-      color: "#3178C6",
-      icon: "typescript",
-      level: 85,
-      description: "Strong Typing, Interfaces, Generics, Next.js Type safety"
+      name: "JWT Auth",
+      category: "Backend & APIs",
+      color: "#D81B60",
+      icon: "jwt",
+      level: 90,
+      description: "JSON Web Tokens, Role-Based Access Control (RBAC), Password rotation"
     },
     {
       name: "MS SQL Server",
-      category: "Database",
+      category: "Databases",
       color: "#CC292B",
-      icon: "mysql",
-      level: 85,
-      description: "Complex schemas, SQLAlchemy ORM, Stored Procedures, Queries"
+      icon: "ms sql",
+      level: 88,
+      description: "Microsoft SQL Server, Complex schemas, Stored procedures, Indexing"
     },
     {
       name: "MySQL",
-      category: "Database",
+      category: "Databases",
       color: "#4479A1",
       icon: "mysql",
-      level: 85,
-      description: "Relational Modeling, Indexing, Transactions, Normalization"
-    },
-    {
-      name: "Tailwind CSS",
-      category: "Styling",
-      color: "#06B6D4",
-      icon: "tailwind",
-      level: 95,
-      description: "Mobile-first responsive design, Utility-first styling, Animations"
+      level: 88,
+      description: "Relational database management, CRUD operations, Optimization"
     },
     {
       name: "Git & GitHub",
-      category: "Version Control",
+      category: "Tools & Workflow",
       color: "#F05032",
       icon: "git",
-      level: 88,
-      description: "Branching strategies, CI/CD Actions, Version management"
+      level: 90,
+      description: "Version control, Branching, Pull requests, CI/CD automated deployment"
     },
     {
       name: "Postman",
-      category: "API Testing",
+      category: "Tools & Workflow",
       color: "#FF6C37",
       icon: "postman",
       level: 90,
-      description: "RESTful API testing, Environments, Automated request flows"
+      description: "RESTful API testing, Environment variables, Automated endpoints test"
     },
     {
-      name: "Docker",
-      category: "Deployment",
-      color: "#2496ED",
-      icon: "docker",
-      level: 80,
-      description: "Containerization, Environment consistency, Deployment"
+      name: "VS Code",
+      category: "Tools & Workflow",
+      color: "#007ACC",
+      icon: "vs code",
+      level: 95,
+      description: "Development environment, Debugging, Extensions, Git integration"
     }
   ],
 
@@ -185,55 +216,52 @@ export const portfolioData = {
       title: "Job Portal (naukri.kaninfos.com)",
       category: "Full Stack",
       description: "A production-ready full-stack Job Portal with Next.js (TypeScript) frontend and FastAPI + MS SQL Server backend.",
-      tags: ["Next.js", "TypeScript", "FastAPI", "MS SQL", "SQLAlchemy", "JWT", "SMTP"],
+      tags: ["Next.js", "TypeScript", "FastAPI", "MS SQL Server", "SQLAlchemy", "JWT", "SMTP"],
       imageBg: "from-blue-600/20 to-indigo-600/20",
       themeColor: "#2563eb",
-      badge: "Enterprise Full Stack",
+      badge: "Production Full Stack",
       github: "https://github.com/AnsariSafwaan",
       live: "https://naukri.kaninfos.com",
       features: [
-        "Co-developed Next.js (TypeScript) frontend and FastAPI + MS SQL backend",
-        "Secure backend APIs with SQLAlchemy ORM, JWT authentication, and RBAC",
-        "Automated OTP email verification via SMTP protocol",
-        "Enterprise security features: 5-attempt account lockout and password rotation policies"
+        "Co-developed Next.js (TypeScript) frontend and FastAPI with MS SQL Server backend",
+        "Built secure backend APIs with SQLAlchemy ORM, JWT authentication, RBAC, and automated OTP email verification via SMTP",
+        "Implemented enterprise security features including 5-attempt account lockout and password rotation policies"
       ],
       previewType: "kanban"
     },
     {
       id: "voice-automation-agent",
       title: "Voice-Activated Automation Agent",
-      category: "Backend",
+      category: "Backend & Automation",
       description: "An intelligent local virtual assistant built with Python to automate desktop workflows, voice navigation, and email sending.",
-      tags: ["Python", "pyttsx3", "SpeechRecognition", "SMTP", "System APIs"],
+      tags: ["Python", "pyttsx3", "SpeechRecognition", "SMTP"],
       imageBg: "from-sky-500/20 to-blue-600/20",
       themeColor: "#0284c7",
-      badge: "Automation & AI",
+      badge: "Python & Automation",
       github: "https://github.com/AnsariSafwaan",
       live: "https://github.com/AnsariSafwaan",
       features: [
-        "Developed local voice assistant using Python, pyttsx3, and SpeechRecognition",
-        "Voice-controlled browser navigation, dynamic web searches, and media playback",
-        "Integrated SMTP protocol to authenticate and send voice-dictated emails programmatically",
-        "Custom system API integrations for desktop workflow automations"
+        "Developed local virtual assistant using Python, pyttsx3, and SpeechRecognition",
+        "Integrated system APIs and external requests for voice-controlled browser navigation, web searches, and media playback",
+        "Implemented SMTP protocol with Python to authenticate and send voice-dictated emails programmatically"
       ],
       previewType: "weather"
     },
     {
       id: "alpine-river-hill",
-      title: "Interactive Web UI (Alpine River Hill)",
+      title: "Interactive Web UI Clone (Alpine River Hill)",
       category: "Frontend",
       description: "High-fidelity frontend replica of a responsive web application utilizing React.js, JavaScript (ES6+), and Bootstrap.",
-      tags: ["React.js", "JavaScript", "Bootstrap", "HTML5", "CSS3"],
+      tags: ["React.js", "JavaScript (ES6+)", "Bootstrap", "HTML5", "CSS3"],
       imageBg: "from-amber-500/20 to-rose-500/20",
       themeColor: "#f59e0b",
-      badge: "Responsive Frontend",
+      badge: "UI/UX & Frontend",
       github: "https://github.com/AnsariSafwaan",
       live: "https://github.com/AnsariSafwaan",
       features: [
-        "Modular, component-based architecture with reusable functional components",
-        "Converted UI/UX designs into pixel-perfect responsive layouts",
-        "Managed UI state and implemented adaptive, mobile-first styling",
-        "Cross-browser compatibility and smooth navigation modals"
+        "Built a modular, component-based architecture using reusable functional components for navigation, modals, and core page sections",
+        "Converted UI/UX Figma templates into responsive, interactive frontend web pages",
+        "Managed UI state and implemented adaptive, mobile-first styling for cross-browser compatibility"
       ],
       previewType: "shop"
     },
@@ -241,18 +269,17 @@ export const portfolioData = {
       id: "portfolio-website",
       title: "Full Stack Developer Portfolio",
       category: "Frontend",
-      description: "A modern, high-performance personal portfolio website built with React, Vite, and Tailwind CSS.",
-      tags: ["React.js", "Tailwind CSS", "Vite", "GitHub Actions"],
+      description: "Personal portfolio website engineered with React.js, Tailwind CSS, and automated GitHub Actions CI/CD deployment.",
+      tags: ["React.js", "JavaScript", "Tailwind CSS", "GitHub Actions"],
       imageBg: "from-purple-500/20 to-blue-500/20",
       themeColor: "#7c3aed",
-      badge: "Portfolio & UI",
+      badge: "Portfolio & CI/CD",
       github: "https://github.com/AnsariSafwaan/portfolio",
       live: "https://ansarisafwaan.github.io/portfolio/",
       features: [
-        "Pixel-perfect responsive Bento-grid layout with smooth scrolling",
-        "Interactive project preview walkthrough modals",
-        "Downloadable and printable CV integration directly from public assets",
-        "Automated CI/CD deployment pipeline via GitHub Actions"
+        "Modern responsive design with smooth scroll navigation and interactive modals",
+        "Direct downloadable and printable PDF resume integration",
+        "Integrated contact form with direct email delivery to inbox"
       ],
       previewType: "portfolio"
     }
@@ -267,11 +294,11 @@ export const portfolioData = {
       badge: "Current",
       isCurrent: true,
       points: [
-        "Co-developed a full-stack Job Portal (naukri.kaninfos.com) using Next.js (TypeScript) for frontend and FastAPI with MS SQL Server for backend.",
+        "Co-developed a full-stack Job Portal (naukri.kaninfos.com) using Next.js (TypeScript) for the frontend and FastAPI with MS SQL Server for the backend.",
         "Built secure backend APIs with SQLAlchemy ORM, JWT authentication, RBAC, and automated OTP email verification via SMTP.",
         "Implemented enterprise security features including 5-attempt account lockout and password rotation policies."
       ],
-      technologies: ["Next.js", "TypeScript", "Python", "FastAPI", "MS SQL Server", "SQLAlchemy", "JWT", "SMTP"]
+      technologies: ["Next.js", "TypeScript", "FastAPI", "Python", "MS SQL Server", "SQLAlchemy", "JWT", "SMTP"]
     },
     {
       id: "exp-2",
@@ -284,7 +311,7 @@ export const portfolioData = {
         "Converted UI/UX Figma templates into responsive, interactive frontend web pages and reusable components using React.js, HTML5, and CSS3.",
         "Implemented client-side state handling and form validations while ensuring mobile-friendly cross-browser compatibility."
       ],
-      technologies: ["React.js", "JavaScript (ES6+)", "HTML5", "CSS3", "Responsive Web Design"]
+      technologies: ["React.js", "JavaScript (ES6+)", "Bootstrap", "HTML5", "CSS3", "Responsive Design"]
     }
   ],
 

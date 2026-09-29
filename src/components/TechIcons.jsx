@@ -2,7 +2,24 @@ import React from 'react';
 
 export const TechIcon = ({ name, className = "w-6 h-6" }) => {
   switch (name.toLowerCase()) {
+    case 'python':
+      return (
+        <svg className={className} viewBox="0 0 24 24" fill="none">
+          <path d="M11.914 2C9.176 2 7.37 3.2 7.37 4.97v2.17h4.63v.65H4.25C2.5 7.79 1 9.3 1 12.02c0 2.76 1.48 4.23 3.25 4.23h1.92v-2.31c0-2.07 1.76-3.8 3.83-3.8h4.59V8.69c0-1.89-1.57-3.69-3.68-3.69h-3v-3h4zm-2.02 1.55a.8.8 0 110 1.6.8.8 0 010-1.6z" fill="#3776AB"/>
+          <path d="M12.086 22c2.738 0 4.544-1.2 4.544-2.97v-2.17H12v-.65h7.75c1.75 0 3.25-1.51 3.25-4.23 0-2.76-1.48-4.23-3.25-4.23h-1.92v2.31c0 2.07-1.76 3.8-3.83 3.8H9.41v1.45c0 1.89 1.57 3.69 3.68 3.69h3v3h-4.004zm2.02-1.55a.8.8 0 110-1.6.8.8 0 010 1.6z" fill="#FFD43B"/>
+        </svg>
+      );
+
+    case 'fastapi':
+      return (
+        <svg className={className} viewBox="0 0 24 24" fill="none">
+          <path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0z" fill="#009688"/>
+          <path d="M13.2 5.5L7.5 13.5h4.2L10.8 18.5 16.5 10.5h-4.2l1.2-5z" fill="#ffffff"/>
+        </svg>
+      );
+
     case 'react':
+    case 'react.js':
       return (
         <svg className={className} viewBox="0 0 115.3 100" fill="none">
           <ellipse cx="57.65" cy="50" rx="57.65" ry="22.2" stroke="#00d8ff" strokeWidth="6" fill="none" transform="rotate(30 57.65 50)" />
@@ -38,6 +55,7 @@ export const TechIcon = ({ name, className = "w-6 h-6" }) => {
       );
 
     case 'javascript':
+    case 'javascript (es6+)':
     case 'js':
       return (
         <svg className={className} viewBox="0 0 630 630">
@@ -53,33 +71,21 @@ export const TechIcon = ({ name, className = "w-6 h-6" }) => {
         <svg className={className} viewBox="0 0 128 128">
           <rect width="128" height="128" rx="16" fill="#3178C6" />
           <path fill="#fff" d="M72.9 66.8h13.2v-7.2H59.7v7.2h13.2v39.4h9.9V66.8zm23.2 16.9c3.9 0 6.6 1.4 8.7 3.5l5.9-6.3c-4.1-3.9-8.9-5.7-14.9-5.7-11.8 0-19.5 8.4-19.5 20.2 0 12.3 7.8 20.4 19.8 20.4 6.7 0 11.5-2.2 15.6-6.3l-5.6-6.4c-2.4 2.2-5.3 3.7-9.3 3.7-6.2 0-10.4-4.5-10.4-11.4-.1-7.1 4-11.4 9.7-11.4z" />
-          <path fill="#fff" d="M117.8 77.2c-2.1-2.9-5.7-4.8-10.4-4.8-8.2 0-13.6 5.3-13.6 13.2s5.4 13.3 13.6 13.3c4.8 0 8.4-1.9 10.5-4.8l7.2 6.5c-4.4 5.4-10.7 8.2-18.1 8.2-14.7 0-24.5-10.2-24.5-23.2 0-13.1 9.8-23.2 24.5-23.2 7.5 0 13.8 2.9 18.2 8.3l-7.4 6.5z" style={{ display: 'none' }} />
         </svg>
       );
 
-    case 'nodejs':
-    case 'node.js':
+    case 'ms sql':
+    case 'ms sql server':
+    case 'microsoft sql server':
+    case 'microsoft sql server (ms sql)':
       return (
-        <svg className={className} viewBox="0 0 32 32">
-          <path fill="#339933" d="M16 2.3L3.1 9.8v14.9L16 32.2l12.9-7.5V9.8L16 2.3zm0 2.4l10.8 6.2v12.5L16 29.7 5.2 23.4V10.9L16 4.7z"/>
-          <path fill="#339933" d="M16 8.5c-4.1 0-7.5 3.4-7.5 7.5s3.4 7.5 7.5 7.5 7.5-3.4 7.5-7.5-3.4-7.5-7.5-7.5zm0 12.5c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5z"/>
-        </svg>
-      );
-
-    case 'express':
-    case 'express.js':
-      return (
-        <div className={`${className} bg-slate-900 text-white rounded-lg flex items-center justify-center font-bold text-xs shadow-inner`}>
-          ex
-        </div>
-      );
-
-    case 'mongodb':
-      return (
-        <svg className={className} viewBox="0 0 24 24" fill="none">
-          <path d="M12 2C12 2 6 9 6 15C6 18.3 8.7 21 12 21C15.3 21 18 18.3 18 15C18 9 12 2 12 2Z" fill="#47A248"/>
-          <path d="M12 2V21C11.5 21 6 18.3 6 15C6 9 12 2 12 2Z" fill="#3FA037"/>
-          <path d="M12 22C11.7 22 11.5 21.6 11.5 21V3C11.5 2.4 12.5 2.4 12.5 3V21C12.5 21.6 12.3 22 12 22Z" fill="#FFFFFF" opacity="0.3"/>
+        <svg className={className} viewBox="0 0 32 32" fill="none">
+          <rect width="32" height="32" rx="8" fill="#CC292B"/>
+          <path d="M7 9C7 7.5 11 6.5 16 6.5S25 7.5 25 9v14c0 1.5-4 2.5-9 2.5S7 24.5 7 23V9z" fill="#ffffff" opacity="0.2"/>
+          <ellipse cx="16" cy="9" rx="8" ry="2.5" fill="#ffffff"/>
+          <path d="M8 14c0 1.4 3.6 2.5 8 2.5s8-1.1 8-2.5" stroke="#ffffff" strokeWidth="1.5"/>
+          <path d="M8 19c0 1.4 3.6 2.5 8 2.5s8-1.1 8-2.5" stroke="#ffffff" strokeWidth="1.5"/>
+          <path d="M8 9v14c0 1.4 3.6 2.5 8 2.5s8-1.1 8-2.5V9" stroke="#ffffff" strokeWidth="1.5"/>
         </svg>
       );
 
@@ -91,12 +97,47 @@ export const TechIcon = ({ name, className = "w-6 h-6" }) => {
         </svg>
       );
 
-    case 'tailwind':
-    case 'tailwind css':
+    case 'bootstrap':
       return (
         <svg className={className} viewBox="0 0 24 24" fill="none">
-          <path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.336 6.182 14.975 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C7.666 17.818 9.027 19.2 12.001 19.2c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.336 13.382 8.975 12 6.001 12z" fill="#38BDF8"/>
+          <rect width="24" height="24" rx="6" fill="#7952B3"/>
+          <path d="M7 6h5.2c1.7 0 2.8.8 2.8 2.1 0 .9-.5 1.6-1.4 1.9 1.1.3 1.8 1.1 1.8 2.2 0 1.5-1.2 2.3-3.1 2.3H7V6zm2.4 3.4h2.5c.7 0 1.1-.3 1.1-.9 0-.6-.4-.9-1.1-.9H9.4v1.8zm0 3.3h2.8c.8 0 1.3-.4 1.3-1 0-.6-.5-1-1.3-1H9.4v2z" fill="#ffffff"/>
         </svg>
+      );
+
+    case 'html5':
+    case 'html5 & css3':
+    case 'html5, css3':
+      return (
+        <svg className={className} viewBox="0 0 24 24" fill="none">
+          <path d="M2.5 2h19l-1.7 19.3L12 23.5l-7.8-2.2L2.5 2z" fill="#E44D26"/>
+          <path d="M12 21.6l6.2-1.7 1.5-16.4H12v18.1z" fill="#F16529"/>
+          <path d="M12 9.5H8.2l-.2-2.5h8.2l.2-2.5H5.5l.7 7.5H12V9.5zm0 6.2l-.1.02-3.4-.9-.2-2.3H5.8l.4 4.5 5.8 1.6V15.7z" fill="#EBEBEB"/>
+          <path d="M12 9.5v2.5h3.9l-.4 4.2-3.5 1v2.6l5.8-1.6.8-8.7H12z" fill="#FFFFFF"/>
+        </svg>
+      );
+
+    case 'sqlalchemy':
+    case 'sqlalchemy (orm)':
+      return (
+        <div className={`${className} bg-red-600 text-white rounded-lg flex items-center justify-center font-bold text-[10px] shadow-sm`}>
+          SQLA
+        </div>
+      );
+
+    case 'jwt':
+    case 'jwt authentication':
+      return (
+        <div className={`${className} bg-pink-600 text-white rounded-lg flex items-center justify-center font-bold text-[10px] shadow-sm`}>
+          JWT
+        </div>
+      );
+
+    case 'sql':
+      return (
+        <div className={`${className} bg-blue-700 text-white rounded-lg flex items-center justify-center font-bold text-[10px] shadow-sm`}>
+          SQL
+        </div>
       );
 
     case 'git':
@@ -116,17 +157,18 @@ export const TechIcon = ({ name, className = "w-6 h-6" }) => {
         </svg>
       );
 
-    case 'docker':
+    case 'vs code':
+    case 'vscode':
       return (
         <svg className={className} viewBox="0 0 24 24" fill="none">
-          <path d="M13.9 10.5h1.9v1.9h-1.9zm-2.8 0h1.9v1.9h-1.9zm-2.8 0h1.9v1.9H8.3zm-2.8 0h1.9v1.9H5.5zm5.6-2.8h1.9v1.9h-1.9zm-2.8 0h1.9v1.9H8.3zm-2.8 0h1.9v1.9H5.5zm8.4 0h1.9v1.9h-1.9zm-2.8-2.8h1.9v1.9h-1.9zm-2.8 0h1.9v1.9H8.3z" fill="#2496ED"/>
-          <path d="M22.5 11.5c-.3-.2-.8-.4-1.4-.3-.2-.5-.6-1.1-1.2-1.5l-.6-.4-.4.6c-.4.7-.6 1.6-.4 2.4-.4.2-1.1.3-2 .3H2.5C2.2 13 2 13.5 2 14c.2 4.1 3.5 7.5 7.8 7.5 5 0 9.2-3.3 10.5-8 .8 0 1.9-.3 2.4-1.2.2-.3.1-.7-.2-.8z" fill="#2496ED"/>
+          <path d="M17.5 2L6.8 12l10.7 10 4.5-2.2V4.2L17.5 2z" fill="#007ACC"/>
+          <path d="M17.5 2L7.3 11.5 2 7.4v9.2l5.3-4.1 10.2 9.5V2z" fill="#0065A9"/>
         </svg>
       );
 
     default:
       return (
-        <div className={`${className} bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold text-xs`}>
+        <div className={`${className} bg-blue-100 text-brand-600 rounded-lg flex items-center justify-center font-bold text-xs`}>
           {name.slice(0, 2).toUpperCase()}
         </div>
       );
